@@ -23,4 +23,9 @@ button:focus {
 
 .row {
   margin-left: 33px;
+  /* outline: 1px solid #ccc; */
+}
+
+.text-right {
+  margin-right: -110px !important;
 }

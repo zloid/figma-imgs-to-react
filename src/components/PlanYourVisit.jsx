@@ -7,8 +7,8 @@ import TomatoText from './TomatoText'
 
 const TodayTomorrowText = styled.span`
   height: 23.72px;
-  left: calc(50% - 110px / 2 + 0.5px);
-  top: calc(50% - 23.72px / 2 - 20.14px);
+  left: calc(50% - 62px / 2 + 0.5px);
+  top: calc(50% - 0px / 2 - 20.14px);
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
@@ -27,6 +27,36 @@ const TodayTomorrowText = styled.span`
     ${props => (props.selected = true)};
   }
 `
+const DateCellData = styled.div`
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+
+  color: #000000;
+  position: absolute;
+  border-top: 3px solid #ccc;
+  margin-top: 28px;
+  left: 0px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  display: ${props => (props.selected ? 'block' : 'none')};
+`
+
+const DateCell = ({ textProp, dayProp, selected, blocked }) => {
+  return (
+    <>
+      <TodayTomorrowText selected={selected} blocked={blocked}>
+        {' '}
+        {dayProp}{' '}
+      </TodayTomorrowText>
+
+      <DateCellData selected={selected}>{textProp}</DateCellData>
+    </>
+  )
+}
 
 const PlanYourVisit = () => {
   return (
@@ -46,18 +76,49 @@ const PlanYourVisit = () => {
             admission.
           </TomatoText>
         </Row>
+
         <Row>
           <Col xs={3}>
-            <TodayTomorrowText blocked>Today</TodayTomorrowText>
+            <DateCell
+              // selected
+              blocked
+              dayProp="Today"
+              textProp={
+                <>
+                  March 21, 2016 <br /> Open 10:30am-5:30pm
+                </>
+              }
+            />
           </Col>
-          <Col xs={6} md={4} className="text-center">
-            <TodayTomorrowText selected>Tomorrow</TodayTomorrowText>
+          <Col xs={5} md={4} className="text-center">
+            <DateCell
+              selected
+              // blocked
+              dayProp="Tomorrow"
+              textProp={
+                <>
+                  March 22, 2016 <br /> Open 10:30am-5:30pm
+                </>
+              }
+            />
           </Col>
-          <Col className="text-center">
-            <TodayTomorrowText blocked>Other</TodayTomorrowText>
+          <Col xs={1}>
+            <DateCell selected /> 
+          </Col>
+          {/* <Col xs={4} className="text-right" xs={{ span: 2, offset: 11 }}> */}
+          <Col xs={{ span: 3, offset: 9 }} md={{ span: 4, offset: 8 }}>
+            <DateCell
+              // selected
+              blocked
+              dayProp="Other"
+              textProp={
+                <>
+                  March 22, 2019 <br /> Open 10:30am-5:30pm
+                </>
+              }
+            />
           </Col>
         </Row>
-        <Row>{/* <Col></Col> */}</Row>
       </Container>
     </>
   )

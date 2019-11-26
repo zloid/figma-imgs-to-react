@@ -2,7 +2,8 @@
 
 .navbar-light .navbar-toggler-icon {
   /* background-image: url(https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square); */
-  background-image: url(../img/menu-hamb.png);
+  /* background-image: url(/imgs/menu-hamb.png); */
+  background-image: url(/imgs/menu-hamb.svg);
   width: 18px;
   height: 13px;   
 }

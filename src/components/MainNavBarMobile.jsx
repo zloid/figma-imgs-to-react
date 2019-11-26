@@ -15,14 +15,10 @@ const StyledBrand = styled.div`
   color: #000000;
 `
 
-const PageNameText = ({ childrens }) => {
-  return <PageName>{childrens}</PageName>
-}
-
 const PageName = styled.p`
   width: 148px;
   height: 22px;
-  left: calc(50% - 148px / 2);
+  margin-left: -50px;
   top: calc(50% - 22px / 2 + 0.5px);
   font-family: Montserrat;
   font-style: normal;
@@ -31,6 +27,11 @@ const PageName = styled.p`
   line-height: 22px;
   text-align: center;
   color: #ff473a;
+  @media (min-width: 768px) {
+    // margin: 10px 20px 0 10px;
+    // font-weight: bolder;
+    display: none;
+  }
 `
 
 const MainNavBarMobile = ({ pageName }) => {
@@ -46,9 +47,8 @@ const MainNavBarMobile = ({ pageName }) => {
             MUSEUM
           </StyledBrand>
         </Navbar.Brand>
-        <PageName> {pageName}</PageName>
-        {/* <PageNameText childrens="test" /> */}
-        {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
+        <PageName>{pageName}</PageName>
+
         <Navbar.Toggle />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">

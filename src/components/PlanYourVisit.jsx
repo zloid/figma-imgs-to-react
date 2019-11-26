@@ -6,7 +6,7 @@ const PlanYourVisit = () => {
   return (
     <>
       <MainNavBarMobile pageName="Plan Your Visit" />
-      <MainNavBarMobile pageName="dell" />
+      <MainNavBarMobile pageName="i" />
     </>
   )
 }

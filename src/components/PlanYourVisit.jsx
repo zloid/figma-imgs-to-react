@@ -15,21 +15,11 @@ const SolidLineRed = styled(SolidLine)`
   border-top: 3px solid #ff473a;
   margin-top: 20px;
 `
-const TotalBlock = styled.div`
-  margin-left: -2%;
-  width: 73%;
-  @media (min-width: 666px) {
-    margin-left: -3%;
-    width: 80%;
-  }
-  @media (min-width: 768px) {
-    margin-left: -3%;
-    width: 83%;
-  }
-  @media (min-width: 1200px) {
-    width: 87%;
-  }
-  display: inline-block;
+const TotalBlock = styled.span`
+  // margin-left: 0%;
+  // width: 73%;
+  // display: inline-block;
+  margin-right: 25px;
 `
 const ContinueToPayButton = styled.button`
   width: 248px;
@@ -129,10 +119,16 @@ const PlanYourVisit = () => {
           <Col>
             <SolidLineRed />
             <SolidLine />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <TodayTomorrowText>Total</TodayTomorrowText>
+          </Col>
+          <Col className="text-right">
             <TotalBlock>
-              <TodayTomorrowText>Total</TodayTomorrowText>
+              <TodayTomorrowText>$16</TodayTomorrowText>
             </TotalBlock>
-            <TodayTomorrowText>$16</TodayTomorrowText>
           </Col>
         </Row>
         <Row>

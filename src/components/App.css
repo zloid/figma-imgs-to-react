@@ -28,7 +28,7 @@ button:focus {
 .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
 .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
 .col-xl-auto {
-  outline: 1px solid goldenrod;
+  /* outline: 1px solid goldenrod; */
 }
 
 .row {
@@ -36,10 +36,20 @@ button:focus {
 }
 
 .text-right {
-  right: 5px !important;
+  margin-right: 15px !important;
 }
 
-.text-center.col-md-4.col-6, .text-right, .col-3  {
+.text-left {
+  margin-left: 15px !important;
+}
+
+/* 
+.text-center.col-md-4.col-6, .text-right, .col-3, .col  {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+} */
+
+.col  {
   padding-right: 0px !important;
   padding-left: 0px !important;
 }

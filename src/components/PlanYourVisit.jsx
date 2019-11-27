@@ -1,11 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import MainNavBarMobile from './MainNavBarMobile'
 import H1 from './H1'
 import TomatoText from './TomatoText'
 import DateCell from './DateCell'
- 
+
 const PlanYourVisit = () => {
   return (
     <>
@@ -26,10 +26,11 @@ const PlanYourVisit = () => {
         </Row>
 
         <Row>
-          <Col xs={3} className="text-center">
+          <Col className="text-center">
             <DateCell
-              selected
-              // blocked
+              lefted
+              // selected
+              blocked
               dayProp="Today"
               textProp={
                 <>
@@ -38,7 +39,7 @@ const PlanYourVisit = () => {
               }
             />
           </Col>
-          <Col xs={6} md={4} className="text-center">
+          <Col className="text-center">
             <DateCell
               selected
               // blocked
@@ -53,8 +54,9 @@ const PlanYourVisit = () => {
 
           <Col className="text-center">
             <DateCell
-              selected
-              // blocked
+              righted
+              // selected
+              blocked
               dayProp="Other"
               textProp={
                 <>

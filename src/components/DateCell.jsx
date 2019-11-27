@@ -11,7 +11,7 @@ const TodayTomorrowText = styled.div`
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  // left: 10px;
+  //   left: 10px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   // position: absolute;
   text-decoration-line: ${props => (props.selected ? 'underline' : 'none')};
@@ -21,6 +21,8 @@ const TodayTomorrowText = styled.div`
   color: ${props => (props.blocked ? '#D4D4D4' : '#050505')};
   display: inline-block;
   vertical-align: top;
+  margin-left: ${props => (props.righted ? '20%' : '10%')};
+  margin-right: ${props => (props.lefted && '30%')};
 `
 const DateCellData = styled.div`
   font-family: Montserrat;
@@ -37,30 +39,35 @@ const DateCellData = styled.div`
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 100%;
   display: ${props => (props.selected ? 'block' : 'none')};
-  //   border-top: 3px solid #ccc;
+  margin-left: ${props => (props.righted ? '-35px' : '5%')};
 `
 
 const SolidLine = styled.div`
-//   position: absolute;
-//   margin-top: 10px;
-  border-top: 3px solid green;
-  width: 125%;
+  //   position: absolute;
+  //   margin-top: 10px;
+  border-top: 3px solid #cccccc80;
+  width: 100%;
   @media (min-width: 768px) {
     // width: 1100px;
   }
 `
 
-const DateCell = ({ textProp, dayProp, selected, blocked }) => {
+const DateCell = ({ textProp, dayProp, selected, blocked, righted, lefted }) => {
   return (
     <>
-      <TodayTomorrowText selected={selected} blocked={blocked}>
+      <TodayTomorrowText
+        selected={selected}
+        blocked={blocked}
+        righted={righted}
+        lefted={lefted}
+      >
         {' '}
         {dayProp}{' '}
       </TodayTomorrowText>
 
       <SolidLine />
 
-      <DateCellData selected={selected}>{textProp}</DateCellData>
+      <DateCellData selected={selected} righted={righted}>{textProp}</DateCellData>
     </>
   )
 }

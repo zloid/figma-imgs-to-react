@@ -22,7 +22,7 @@ const TodayTomorrowText = styled.div`
   display: inline-block;
   vertical-align: top;
   margin-left: ${props => (props.righted ? '20%' : '10%')};
-  margin-right: ${props => (props.lefted && '30%')};
+  margin-right: ${props => props.lefted && '30%'};
 `
 const DateCellData = styled.div`
   font-family: Montserrat;
@@ -39,7 +39,8 @@ const DateCellData = styled.div`
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 100%;
   display: ${props => (props.selected ? 'block' : 'none')};
-  margin-left: ${props => (props.righted ? '-35px' : '5%')};
+  margin-left: ${props => (props.righted ? '5%' : '5%')};
+  margin-left: ${props => props.lefted && '-10%'};
 `
 
 const SolidLine = styled.div`
@@ -52,7 +53,14 @@ const SolidLine = styled.div`
   }
 `
 
-const DateCell = ({ textProp, dayProp, selected, blocked, righted, lefted }) => {
+const DateCell = ({
+  textProp,
+  dayProp,
+  selected,
+  blocked,
+  righted,
+  lefted,
+}) => {
   return (
     <>
       <TodayTomorrowText
@@ -67,7 +75,9 @@ const DateCell = ({ textProp, dayProp, selected, blocked, righted, lefted }) => 
 
       <SolidLine />
 
-      <DateCellData selected={selected} righted={righted}>{textProp}</DateCellData>
+      <DateCellData selected={selected} righted={righted} lefted={lefted}>
+        {textProp}
+      </DateCellData>
     </>
   )
 }

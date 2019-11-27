@@ -55,8 +55,8 @@ const PlanYourVisit = () => {
           <Col className="text-center">
             <DateCell
               righted
-              // selected
-              blocked
+              //selected
+               blocked
               dayProp="Other"
               textProp={
                 <>

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const TodayTomorrowText = styled.div`
+export const TodayTomorrowText = styled.div`
   height: 23.72px;
   left: calc(50% - 62px / 2 + 0.5px);
   top: calc(50% - 0px / 2 - 20.14px);
@@ -39,7 +39,8 @@ const DateCellData = styled.div`
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 100%;
   display: ${props => (props.selected ? 'block' : 'none')};
-  margin-left: ${props => (props.righted ? '5%' : '5%')};
+//   margin-left: ${props => (props.righted ? '5%' : '5%')};
+  margin-left: 5%;
   margin-left: ${props => props.lefted && '-10%'};
 `
 

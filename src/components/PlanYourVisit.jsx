@@ -5,6 +5,8 @@ import MainNavBarMobile from './MainNavBarMobile'
 import H1 from './H1'
 import TomatoText from './TomatoText'
 import DateCell from './DateCell'
+import AdultsBlock from './AdultsBlock'
+import { HollowDiv } from "./HollowDiv";
 
 const PlanYourVisit = () => {
   return (
@@ -12,17 +14,21 @@ const PlanYourVisit = () => {
       <Container>
         <MainNavBarMobile pageName="Plan Your Visit" />
         <Row>
-          <H1>
-            Skip the Line.
-            <br />
-            Purchase Tickets.
-          </H1>
+          <Col>
+            <H1>
+              Skip the Line.
+              <br />
+              Purchase Tickets.
+            </H1>
+          </Col>
         </Row>
         <Row>
-          <TomatoText>
-            All exhibitions, audio tours, and films included in the price of
-            admission.
-          </TomatoText>
+          <Col>
+            <TomatoText>
+              All exhibitions, audio tours, and films included in the price of
+              admission.
+            </TomatoText>
+          </Col>
         </Row>
 
         <Row>
@@ -56,7 +62,7 @@ const PlanYourVisit = () => {
             <DateCell
               righted
               //selected
-               blocked
+              blocked
               dayProp="Other"
               textProp={
                 <>
@@ -66,14 +72,15 @@ const PlanYourVisit = () => {
             />
           </Col>
         </Row>
+
         <Row>
           <Col>
-            {' '}
-            <hr />
+            <AdultsBlock />
           </Col>
-        </Row>
-        <Row>
-          <Col>test test 111111111</Col>
+          <Col>
+          <HollowDiv/>
+          testttt
+          </Col>
         </Row>
       </Container>
     </>

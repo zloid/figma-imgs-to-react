@@ -48,10 +48,7 @@ const SolidLine = styled.div`
   //   position: absolute;
   //   margin-top: 10px;
   border-top: 3px solid #cccccc80;
-  width: 100%;
-  @media (min-width: 768px) {
-    // width: 1100px;
-  }
+  width: 100%;  
 `
 
 const DateCell = ({

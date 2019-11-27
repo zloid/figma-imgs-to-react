@@ -25,7 +25,10 @@ const AdultsBlockId = styled.div`
   margin-bottom: 15px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: #ccc;
-  
+`
+
+const StudentsBlock = styled.div`
+  margin-top: 58px;
 `
 
 const AdultsBlock = () => {
@@ -39,6 +42,11 @@ const AdultsBlock = () => {
         <br />
         <AdultsBlockId>65+ with ID</AdultsBlockId>
       </SeniorsBlock>
+      <StudentsBlock>
+        <TodayTomorrowText>Students</TodayTomorrowText>
+        <br />
+        <AdultsBlockId>with ID</AdultsBlockId>
+      </StudentsBlock>
     </>
   )
 }

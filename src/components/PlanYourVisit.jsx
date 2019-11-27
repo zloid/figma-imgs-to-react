@@ -6,7 +6,8 @@ import H1 from './H1'
 import TomatoText from './TomatoText'
 import DateCell from './DateCell'
 import AdultsBlock from './AdultsBlock'
-import { HollowDiv } from "./HollowDiv";
+import { HollowDiv } from './HollowDiv'
+import CounterBlock from './CounterBlock'
 
 const PlanYourVisit = () => {
   return (
@@ -77,9 +78,11 @@ const PlanYourVisit = () => {
           <Col>
             <AdultsBlock />
           </Col>
-          <Col>
-          <HollowDiv/>
-          testttt
+          <Col className="text-right">
+            <HollowDiv />
+            <CounterBlock count={2}/>
+            <CounterBlock count={0}/>
+            <CounterBlock count={0}/>
           </Col>
         </Row>
       </Container>

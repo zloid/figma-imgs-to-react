@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+a.navbar-brand {
+  margin-left: -15px !important;
+}
+
 .navbar-light .navbar-toggler-icon {
   /* background-image: url(https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square); */
   background-image: url(/imgs/menu-hamb.svg);
@@ -9,7 +13,7 @@
 
 .navbar-light .navbar-toggler {
   border: none;
-  margin-right: -18px;
+  margin-right: -25px;
   margin-top: -18px;
 }
 
@@ -28,13 +32,14 @@ button:focus {
 }
 
 .row {
-  margin-left: 33px;
+  margin-left: 25px;
 }
 
 .text-right {
   right: 5px !important;
 }
-/* 
-.text-center.col-md-4.col-6 {
-  padding: 0px !important;
-} */
+
+.text-center.col-md-4.col-6, .text-right, .col-3  {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}

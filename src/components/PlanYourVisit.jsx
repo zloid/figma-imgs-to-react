@@ -5,16 +5,7 @@ import MainNavBarMobile from './MainNavBarMobile'
 import H1 from './H1'
 import TomatoText from './TomatoText'
 import DateCell from './DateCell'
-
-const SolidLine = styled.div`
-  // position: absolute;
-  border-top: 3px solid green;
-  width: 100%;
-  @media (min-width: 768px) {
-    // width: 1100px;
-  }
-`
-
+ 
 const PlanYourVisit = () => {
   return (
     <>
@@ -35,10 +26,10 @@ const PlanYourVisit = () => {
         </Row>
 
         <Row>
-          <Col xs={3}>
+          <Col xs={3} className="text-center">
             <DateCell
-              // selected
-              blocked
+              selected
+              // blocked
               dayProp="Today"
               textProp={
                 <>
@@ -59,14 +50,11 @@ const PlanYourVisit = () => {
               }
             />
           </Col>
-          {/* <Col xs={1}> */}
-          {/* <DateCell selected />  */}
-          {/* </Col> */}
-          {/* <Col xs={{ span: 2, offset: 9 }} md={{ span: 4, offset: 8 }}> */}
-          <Col className="text-right">
+
+          <Col className="text-center">
             <DateCell
-              // selected
-              blocked
+              selected
+              // blocked
               dayProp="Other"
               textProp={
                 <>
@@ -75,8 +63,6 @@ const PlanYourVisit = () => {
               }
             />
           </Col>
-          <SolidLine />
-
         </Row>
         <Row>
           <Col>

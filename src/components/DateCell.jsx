@@ -17,7 +17,7 @@ const TodayTomorrowText = styled.div`
   text-decoration-line: ${props => (props.selected ? 'underline' : 'none')};
   border-bottom: ${props => (props.selected ? '3px solid #ff473a' : 'none')};
   padding-bottom: ${props => (props.selected ? '30px' : '0px')};
-  margin-top: ${props => (props.blocked ? '10px' : '')};
+  margin-top: ${props => (props.blocked ? '9.2px' : '0px')};
   color: ${props => (props.blocked ? '#D4D4D4' : '#050505')};
   display: inline-block;
   vertical-align: top;
@@ -32,12 +32,22 @@ const DateCellData = styled.div`
 
   color: #000000;
   // position: absolute;
-  border-top: 3px solid #ccc;
   // margin-top: 28px;
   left: 0px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   width: 100%;
   display: ${props => (props.selected ? 'block' : 'none')};
+  //   border-top: 3px solid #ccc;
+`
+
+const SolidLine = styled.div`
+//   position: absolute;
+//   margin-top: 10px;
+  border-top: 3px solid green;
+  width: 125%;
+  @media (min-width: 768px) {
+    // width: 1100px;
+  }
 `
 
 const DateCell = ({ textProp, dayProp, selected, blocked }) => {
@@ -47,6 +57,8 @@ const DateCell = ({ textProp, dayProp, selected, blocked }) => {
         {' '}
         {dayProp}{' '}
       </TodayTomorrowText>
+
+      <SolidLine />
 
       <DateCellData selected={selected}>{textProp}</DateCellData>
     </>

@@ -1,5 +1,5 @@
 import React from 'react'
-// import styled from 'styled-components'
+import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
 import MainNavBarMobile from './MainNavBarMobile'
 import H1 from './H1'
@@ -8,6 +8,29 @@ import DateCell from './DateCell'
 import AdultsBlock from './AdultsBlock'
 import { HollowDiv } from './HollowDiv'
 import CounterBlock from './CounterBlock'
+import { SolidLine } from './SolidLine'
+import { TodayTomorrowText } from './TodayTomorrowText'
+
+const SolidLineRed = styled(SolidLine)`
+  border-top: 3px solid #ff473a;
+  margin-top: 26px;
+`
+const TotalBlock = styled.div`
+  margin-left: -2%;
+  width: 73%;
+  @media (min-width: 666px) {
+    margin-left: -3%;
+    width: 80%;
+  }
+  @media (min-width: 768px) {
+    margin-left: -3%;
+    width: 83%;
+  }
+  @media (min-width: 1200px) {
+    width: 87%;
+  }
+  display: inline-block;
+`
 
 const PlanYourVisit = () => {
   return (
@@ -80,9 +103,19 @@ const PlanYourVisit = () => {
           </Col>
           <Col className="text-right">
             <HollowDiv />
-            <CounterBlock count={2}/>
-            <CounterBlock count={0}/>
-            <CounterBlock count={0}/>
+            <CounterBlock count={2} />
+            <CounterBlock count={0} />
+            <CounterBlock count={0} />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <SolidLineRed />
+            <SolidLine />
+            <TotalBlock>
+              <TodayTomorrowText>Total</TodayTomorrowText>
+            </TotalBlock>
+            <TodayTomorrowText>$16</TodayTomorrowText>
           </Col>
         </Row>
       </Container>

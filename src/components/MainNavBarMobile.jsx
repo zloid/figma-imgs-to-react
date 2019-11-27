@@ -27,7 +27,7 @@ const PageName = styled.p`
   line-height: 22px;
   text-align: center;
   color: #ff473a;
-  @media (min-width: 768px) {
+  @media (min-width: 990px) {
     // margin: 10px 20px 0 10px;
     // font-weight: bolder;
     display: none;

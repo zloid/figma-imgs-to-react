@@ -1,5 +1,5 @@
 import React from 'react'
-import { TodayTomorrowText } from './DateCell'
+import { TodayTomorrowText } from './TodayTomorrowText'
 import styled from 'styled-components'
 import { HollowDiv } from './HollowDiv'
 
@@ -9,8 +9,8 @@ const SeniorsBlock = styled.div`
   @media (min-width: 768px) {
     margin-left: 65px;
   }
-  @media (min-width: 1000px) {
-    margin-left: 75px;
+  @media (min-width: 1200px) {
+    margin-left: 88px;
   }
   margin-top: -8px;
   padding-top: 18px;

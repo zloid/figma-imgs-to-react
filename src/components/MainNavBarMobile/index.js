@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Navbar, Nav } from 'react-bootstrap'
+import { Navbar, Nav, Row, Col } from 'react-bootstrap'
 import StyledBrand from './StyledBrand'
 import PageName from './PageName'
 import { slide as Menu } from 'react-burger-menu'
+import ImageFigure from './ImageFigure'
 
 const HollowMenu = styled.div`
   @media (max-width: 990px) {
@@ -16,7 +17,7 @@ const MainNavBarMobile = ({ pageName }) => {
   return (
     <>
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home2">
+        <Navbar.Brand href="/">
           <StyledBrand>
             THE
             <br />
@@ -30,25 +31,33 @@ const MainNavBarMobile = ({ pageName }) => {
         <Navbar.Toggle onClick={() => OpenMenu(!menuOpenOrNot)} />
 
         <Menu isOpen={menuOpenOrNot} right width={'300px'}>
-          {/* <a className="menu-item" href="#">
-            Home
-          </a>
-          <a className="menu-item" href="#">
-            About
-          </a>
-          <a className="menu-item" href="#">
-            Contact
-          </a> */}
           <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
+            <Row>
+              <Col xs={3} >
+                <ImageFigure imgUrl="/imgs/iconCollection.svg" />
+              </Col>
+              {/* <Col className="text-center"> */}
+              <Col>
+              <Nav.Link href="#link">Collections</Nav.Link>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={3} >
+                <ImageFigure imgUrl="/imgs/iconPlanYourVisit.svg" />
+              </Col>
+              <Col>
+                <Nav.Link href="#home">Plan Your Visit</Nav.Link>
+              </Col>
+            </Row>
+            
           </Nav>
         </Menu>
         {/* <Navbar.Collapse id="basic-navbar-nav"> */}
         <HollowMenu>
           <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="#vis">Plan Your Visit</Nav.Link>
+            <Nav.Link href="#col">Collections</Nav.Link>
           </Nav>
         </HollowMenu>
         {/* </Navbar.Collapse>  */}

@@ -8,8 +8,8 @@ import './App.css'
 function App() {
   return (
     <>
-      {/* <PlanYourVisit /> */}
-      <Collections />
+      <PlanYourVisit />
+      {/* <Collections /> */}
     </>
   )
 }

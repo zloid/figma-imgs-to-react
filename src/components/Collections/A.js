@@ -13,6 +13,9 @@ const A = styled.a`
     text-decoration-line: none;
   }
   margin-left: -8px;
+  display: block;
+  margin-top: 6px;
+  margin-bottom: 15px;
 `
 
 export default A

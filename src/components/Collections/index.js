@@ -1,7 +1,6 @@
 import React from 'react'
 import MainNavBarMobile from '../MainNavBarMobile'
 import { Container, Row, Col } from 'react-bootstrap'
-import styled from 'styled-components'
 import SearchInput from './SearchInput'
 import CardBlock from './CardBlock'
 
@@ -42,8 +41,38 @@ const Collections = () => {
               }
             />
           </Col>
-          <Col xs={6}>img 2</Col>
-          <Col xs={6}>img 3</Col>
+          <Col xs={6}>
+            <CardBlock
+              href="#"
+              imgUrl="/imgs/de-stijl.jpg"
+              text={<p>DE STIJL</p>}
+            />
+          </Col>
+          <Col xs={6}>
+            <CardBlock
+              href="#"
+              imgUrl="/imgs/cubism.jpg"
+              text={<p>CUBISM</p>}
+            />
+          </Col>
+          <Col xs={6}>
+            <CardBlock
+              href="#"
+              imgUrl="/imgs/americ-photog.jpg"
+              text={
+                <p>
+                  AMERICAN <br /> PHOTOGRAPHY
+                </p>
+              }
+            />
+          </Col>
+          <Col xs={6}>
+            <CardBlock
+              href="#"
+              imgUrl="/imgs/greek-antiq.jpg"
+              text={<p>GREEK ANTIQUITIES</p>}
+            />
+          </Col>
         </Row>
       </Container>
     </>

@@ -133,11 +133,11 @@ figure {
 
 /* Position and sizing of burger button */
 .bm-burger-button {
-  position: fixed;
+  /* position: fixed;
   width: 36px;
   height: 30px;
   left: 36px;
-  top: 36px;
+  top: 36px; */
   display: none;
 }
 
@@ -179,6 +179,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
   background: #ff473a;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
+  padding-top: 5px;
+  /* box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25); */
 }
 
 .bm-menu a {
@@ -217,5 +219,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-item.mr-auto.navbar-nav {
   outline: 1px solid #ff473a;
   margin-left: -60px;
+}
+
+.bm-menu-wrap,
+.bm-overlay {
+  top: 0;
+  left: 0;
 }
 /* END BURGER MENU */

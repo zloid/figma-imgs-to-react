@@ -15,14 +15,20 @@ const HollowMenu = styled.div`
 
 const MainNavBarMobile = ({ pageName }) => {
   const [menuOpenOrNot, OpenMenu] = useState(false)
+  const [shadowForBurgMenu, setShadowForBurgMenu] = useState('')
 
-  
-// const shadowForBurgerMenu = {
-//   bmMenu: {    
-//     boxShadow: () => menuOpenOrNot ? '4px 0px 4px rgba(0, 0, 0, 0.25)' : '0px'
-//   },
-// }
- 
+  let isMenuOpen = function(state) {
+    if (state.isOpen) {
+      return setShadowForBurgMenu('4px 0px 4px rgba(0, 0, 0, 0.25)')
+    }
+    return setShadowForBurgMenu('')
+  }
+
+  const shadowForBurgerMenu = {
+    bmMenu: {
+      boxShadow: shadowForBurgMenu,
+    },
+  }
 
   return (
     <>
@@ -38,11 +44,18 @@ const MainNavBarMobile = ({ pageName }) => {
         </Navbar.Brand>
         <PageName>{pageName}</PageName>
 
-        <Navbar.Toggle onClick={() => OpenMenu(!menuOpenOrNot)} />
-{/* BURGER MENU */}
-        <Menu     
-          // disableOverlayClick
-          disableOverlayClick={() => OpenMenu(!menuOpenOrNot)}
+        <Navbar.Toggle
+          onClick={() => {
+            OpenMenu(!menuOpenOrNot)
+          }}
+        />
+        {/* BURGER MENU */}
+        <Menu
+          onStateChange={isMenuOpen}
+          styles={shadowForBurgerMenu}
+          disableOverlayClick={() => {
+            OpenMenu(!menuOpenOrNot)
+          }}
           isOpen={menuOpenOrNot}
           width={'300px'}
         >
@@ -59,7 +72,6 @@ const MainNavBarMobile = ({ pageName }) => {
               <Col xs={3}>
                 <ImageFigure imgUrl="/imgs/iconCollection.svg" />
               </Col>
-              {/* <Col className="text-center"> */}
               <Col>
                 <Nav.Link href="#link">Collections</Nav.Link>
               </Col>

@@ -1,6 +1,6 @@
 import React from 'react'
-// import styled from 'styled-components'
 import PlanYourVisit from './PlanYourVisit'
+import Collections from './Collections'
 
 import './App.css'
  
@@ -8,7 +8,8 @@ import './App.css'
 function App() {
   return (
     <>
-      <PlanYourVisit />
+      {/* <PlanYourVisit /> */}
+      <Collections />
     </>
   )
 }

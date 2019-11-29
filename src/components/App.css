@@ -37,11 +37,14 @@ button:focus {
   margin-left: 15px !important;
 }
  
-
 .col {
   padding-right: 0px !important;
   padding-left: 0px !important;
 }
+
+/* nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+  background-color: #fff !important;
+} */
 
 /* BURGER MENU */
 

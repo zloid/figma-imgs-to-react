@@ -31,7 +31,7 @@ const MainNavBarMobile = ({ pageName }) => {
       <Helmet>
         <title>{pageName}</title>
       </Helmet>
-      <Navbar bg="light" expand="lg">
+      <Navbar expand="lg">
         <Navbar.Brand href="/">
           <StyledBrand>
             THE

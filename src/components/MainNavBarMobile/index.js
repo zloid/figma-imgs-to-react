@@ -7,6 +7,8 @@ import ImageFigure from './ImageFigure'
 import InputField from './InputField'
 import HidingMenu from './HidingMenu'
 
+import Helmet from 'react-helmet'
+
 const MainNavBarMobile = ({ pageName }) => {
   const [menuOpenOrNot, OpenMenu] = useState(false)
   const [shadowForBurgMenu, setShadowForBurgMenu] = useState('')
@@ -26,6 +28,9 @@ const MainNavBarMobile = ({ pageName }) => {
 
   return (
     <>
+      <Helmet>
+        <title>{pageName}</title>
+      </Helmet>
       <Navbar bg="light" expand="lg">
         <Navbar.Brand href="/">
           <StyledBrand>

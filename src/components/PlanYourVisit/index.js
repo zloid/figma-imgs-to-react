@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-bootstrap'
-import MainNavBarMobile from './MainNavBarMobile'
+import MainNavBarMobile from '../MainNavBarMobile'
 import H1 from './H1'
 import TomatoText from './TomatoText'
 import DateCell from './DateCell'
@@ -10,33 +10,14 @@ import { HollowDiv } from './HollowDiv'
 import CounterBlock from './CounterBlock'
 import { SolidLine } from './SolidLine'
 import { TodayTomorrowText } from './TodayTomorrowText'
+import ContinueToPayButton from './ContinueToPayButton'
 
 const SolidLineRed = styled(SolidLine)`
   border-top: 3px solid #ff473a;
   margin-top: 20px;
 `
 const TotalBlock = styled.span`
-  // margin-left: 0%;
-  // width: 73%;
-  // display: inline-block;
   margin-right: 25px;
-`
-const ContinueToPayButton = styled.button`
-  width: 248px;
-  height: 42px;
-  // line-height: 50px;
-  margin: 0 auto;
-  margin-top: 12px;
-  padding: 0;
-  border: 1px solid #d4d4d4;
-  color: #fff;
-  background: #ff473a;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 15px;
 `
 
 const PlanYourVisit = () => {

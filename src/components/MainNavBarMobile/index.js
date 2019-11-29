@@ -1,18 +1,11 @@
 import React, { useState } from 'react'
 import { Navbar, Nav, Row, Col } from 'react-bootstrap'
 import { slide as Menu } from 'react-burger-menu'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components'
 import StyledBrand from './StyledBrand'
 import PageName from './PageName'
 import ImageFigure from './ImageFigure'
 import InputField from './InputField'
-
-const HidingMenu = styled.div`
-  @media (max-width: 990px) {
-    display: none;
-  }
-`
+import HidingMenu from './HidingMenu'
 
 const MainNavBarMobile = ({ pageName }) => {
   const [menuOpenOrNot, OpenMenu] = useState(false)
@@ -82,24 +75,17 @@ const MainNavBarMobile = ({ pageName }) => {
                 <ImageFigure imgUrl="/imgs/iconPlanYourVisit.svg" />
               </Col>
               <Col>
-                <Nav.Link href="/plan-yours-visit">Plan Your Visit</Nav.Link>
+                <Nav.Link href="/plan-your-visit">Plan Your Visit</Nav.Link>
               </Col>
             </Row>
           </Nav>
         </Menu>
-        {/* <Navbar.Collapse id="basic-navbar-nav"> */}
         <HidingMenu>
           <Nav className="mr-auto">
-            {/* <Nav.Link href="/">Home</Nav.Link> */}
-            <Nav.Link>
-              <Link to="/plan-yours-visit">Plan Your Visit</Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/collections">Collections</Link>
-            </Nav.Link>
+            <Nav.Link href="/plan-your-visit">Plan Your Visit</Nav.Link>
+            <Nav.Link href="/collections">Collections</Nav.Link>
           </Nav>
         </HidingMenu>
-        {/* </Navbar.Collapse>  */}
       </Navbar>
     </>
   )

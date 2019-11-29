@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
 import { Navbar, Nav, Row, Col } from 'react-bootstrap'
+import { slide as Menu } from 'react-burger-menu'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 import StyledBrand from './StyledBrand'
 import PageName from './PageName'
-import { slide as Menu } from 'react-burger-menu'
 import ImageFigure from './ImageFigure'
 import InputField from './InputField'
 
-const HollowMenu = styled.div`
+const HidingMenu = styled.div`
   @media (max-width: 990px) {
     display: none;
   }
@@ -17,7 +18,7 @@ const MainNavBarMobile = ({ pageName }) => {
   const [menuOpenOrNot, OpenMenu] = useState(false)
   const [shadowForBurgMenu, setShadowForBurgMenu] = useState('')
 
-  let isMenuOpen = function(state) {
+  const isMenuOpen = function(state) {
     if (state.isOpen) {
       return setShadowForBurgMenu('4px 0px 4px rgba(0, 0, 0, 0.25)')
     }
@@ -73,7 +74,7 @@ const MainNavBarMobile = ({ pageName }) => {
                 <ImageFigure imgUrl="/imgs/iconCollection.svg" />
               </Col>
               <Col>
-                <Nav.Link href="#link">Collections</Nav.Link>
+                <Nav.Link href="/collections">Collections</Nav.Link>
               </Col>
             </Row>
             <Row>
@@ -81,19 +82,23 @@ const MainNavBarMobile = ({ pageName }) => {
                 <ImageFigure imgUrl="/imgs/iconPlanYourVisit.svg" />
               </Col>
               <Col>
-                <Nav.Link href="#home">Plan Your Visit</Nav.Link>
+                <Nav.Link href="/plan-yours-visit">Plan Your Visit</Nav.Link>
               </Col>
             </Row>
           </Nav>
         </Menu>
         {/* <Navbar.Collapse id="basic-navbar-nav"> */}
-        <HollowMenu>
+        <HidingMenu>
           <Nav className="mr-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="#vis">Plan Your Visit</Nav.Link>
-            <Nav.Link href="#col">Collections</Nav.Link>
+            {/* <Nav.Link href="/">Home</Nav.Link> */}
+            <Nav.Link>
+              <Link to="/plan-yours-visit">Plan Your Visit</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/collections">Collections</Link>
+            </Nav.Link>
           </Nav>
-        </HollowMenu>
+        </HidingMenu>
         {/* </Navbar.Collapse>  */}
       </Navbar>
     </>

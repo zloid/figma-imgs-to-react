@@ -117,12 +117,7 @@ figure {
 .text-left {
   margin-left: 15px !important;
 }
-
-/* 
-.text-center.col-md-4.col-6, .text-right, .col-3, .col  {
-  padding-right: 0px !important;
-  padding-left: 0px !important;
-} */
+ 
 
 .col {
   padding-right: 0px !important;

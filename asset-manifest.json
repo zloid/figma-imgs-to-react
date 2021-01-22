@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/figma-template-to-react/static/css/main.2d41e40e.chunk.css",
+    "main.js": "/figma-template-to-react/static/js/main.d1117b9c.chunk.js",
+    "main.js.map": "/figma-template-to-react/static/js/main.d1117b9c.chunk.js.map",
+    "runtime-main.js": "/figma-template-to-react/static/js/runtime-main.fad71c43.js",
+    "runtime-main.js.map": "/figma-template-to-react/static/js/runtime-main.fad71c43.js.map",
+    "static/css/2.833dd627.chunk.css": "/figma-template-to-react/static/css/2.833dd627.chunk.css",
+    "static/js/2.36dd3e38.chunk.js": "/figma-template-to-react/static/js/2.36dd3e38.chunk.js",
+    "static/js/2.36dd3e38.chunk.js.map": "/figma-template-to-react/static/js/2.36dd3e38.chunk.js.map",
+    "index.html": "/figma-template-to-react/index.html",
+    "precache-manifest.f638dcc8b1bd107701fe17961d9f3dd4.js": "/figma-template-to-react/precache-manifest.f638dcc8b1bd107701fe17961d9f3dd4.js",
+    "service-worker.js": "/figma-template-to-react/service-worker.js",
+    "static/css/2.833dd627.chunk.css.map": "/figma-template-to-react/static/css/2.833dd627.chunk.css.map",
+    "static/css/main.2d41e40e.chunk.css.map": "/figma-template-to-react/static/css/main.2d41e40e.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fad71c43.js",
+    "static/css/2.833dd627.chunk.css",
+    "static/js/2.36dd3e38.chunk.js",
+    "static/css/main.2d41e40e.chunk.css",
+    "static/js/main.d1117b9c.chunk.js"
+  ]
+}
